@@ -196,6 +196,7 @@ impl Client {
                 req = req.query(&[("status[]", name)])
             }
         }
+        println!("[btv] in orb client, req is: {req:?}");
         self.stream_paginated_request(&params.inner, req)
     }
 
